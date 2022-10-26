@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Rim List</h1>
+
+{% for rim in rim_list %}
+  <a href="{% url 'rims_detail' rim.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ rim.name }}</span>
+            <p>Color: {{ rim.color }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}
